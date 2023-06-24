@@ -1,7 +1,10 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+  components: true,
+  
   head: {
-    title: 'movie',
+    title: 'Ghibli\'s Filmography Collection',
     htmlAttrs: {
       lang: 'en'
     },
@@ -37,7 +40,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseURL: process.env.API_PATH,
+    credentials: true,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
