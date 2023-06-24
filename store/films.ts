@@ -9,10 +9,7 @@ export type RootState = ReturnType<typeof state>
 export const mutations: MutationTree<RootState> = {
    SET_FILMS(state, films) {
       if (films) {
-         state.films = films.map((film: any) => {
-            const { title, release_date, running_time, image, id } = film;
-            return { title, release_date, running_time, image, id };
-         })
+         state.films = films
       } else {
          state.films = []
       }
@@ -22,7 +19,7 @@ export const mutations: MutationTree<RootState> = {
 export const actions: ActionTree<RootState, RootState> = {
    async fetchFilms({ commit }) {
       try {
-         const response = await this.$axios.$get('films')
+         const response = await this.$axios.$get('films?fields=title,release_date,running_time,id,image')
          commit('SET_FILMS', response)
       } catch (e: any) {
          // Create mixin error

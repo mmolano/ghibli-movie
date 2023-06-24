@@ -1,17 +1,16 @@
 <template>
-   <div class="w-300 aspect-w-3 overflow-hidden m-4">
+   <div class="w-300 aspect-w-3 m-4">
       <img :src="film.image" alt="film image" class="w-300 object-center h-400 mx-auto">
       <div>
          <h2 class="font-bold text-lg">{{ film.title }}</h2>
-         <p>Length: {{ convert(film.running_time) }}</p>
-         <p>Date: {{ film.release_date }}</p>
-         <nuxt-link :to="'/films/' + film.id">View Details</nuxt-link>
+         <p>{{ convert(film.running_time) }}</p>
+         <p>Released: {{ film.release_date }}</p>
+         <nuxt-link class="p-2 my-2 bg-blue-600 w-full text-center block" :to="'/films/' + film.id">View Details</nuxt-link>
       </div>
    </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import toHours from '../../lib/minutes-converter';
 
 interface Film {
@@ -22,7 +21,7 @@ interface Film {
    image: string;
 }
 
-export default Vue.extend({
+export default {
    name: 'CardMovie',
    props: {
       film: {
@@ -42,12 +41,12 @@ export default Vue.extend({
          return toHours(minutes);
       }
    }
-})
+}
 </script>
 
 <style lang="css" scoped>
 img {
-   max-width: 30rem;
-   min-width: 18rem;
+   max-width: 25rem;
+   min-width: 16rem;
 }
 </style>

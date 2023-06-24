@@ -2,6 +2,13 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   components: true,
+
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true
+    }
+  },
   
   head: {
     title: 'Ghibli\'s Filmography Collection',
@@ -36,6 +43,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

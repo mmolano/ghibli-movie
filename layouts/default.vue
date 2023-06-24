@@ -1,5 +1,6 @@
 <template>
    <div class="main my-2.5 mx-auto">
+      <HeroCard />
       <Nuxt keep-alive />
    </div>
 </template>
