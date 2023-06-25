@@ -1,7 +1,21 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+  components: true,
+
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true
+    }
+  },
+
+  ignore: [
+    '**/*.cy.js', // Ignore cypress files
+  ],
+
   head: {
-    title: 'movie',
+    title: 'Ghibli\'s Filmography Collection',
     htmlAttrs: {
       lang: 'en'
     },
@@ -33,11 +47,19 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    ['nuxt-tailvue', { toast: true }],
   ],
+
+  axios: {
+    baseURL: process.env.API_PATH,
+    credentials: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

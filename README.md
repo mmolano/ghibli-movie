@@ -1,69 +1,54 @@
-# movie
+
+# Ghibli's 'WebApp
+<table>
+<tr>
+<td>
+  This web application retrieves every movie provided by Ghibli's API.
+</td>
+</tr>
+</table>
+
+## Demo
+There is a working live demo available for this project at the Environments section. 
+
+## Built with 
+
+- ![NuxtJs](https://img.shields.io/badge/Nuxt.js-16181D.svg?style=for-the-badge&logo=nuxtdotjs&logoColor=#191A1A)
+- ![Typescript](https://img.shields.io/badge/Typescript-16181D.svg?style=for-the-badge&logo=typescript&logoColor=blue)
+- ![JavaScript](https://img.shields.io/badge/Javascript-16181D.svg?style=for-the-badge&logo=javascript&logoColor=yellow)
+
+## dependencies
+
+- Font-awesome : https://fontawesome.com/
+- Nuxt-Tailwind: https://tailwindcss.nuxtjs.org/
+- Axios: https://axios.nuxtjs.org/
+- Cypress: https://www.cypress.io/
+- Sass: https://sass-lang.com
+
+### .env file
+
+A `.env` file has to be created.
+For that, you can copy / paste the `.env.example` to `.env`.
+- Put the corresponding BASE_URL of the API
 
 ## Build Setup
 
 ```bash
-# install dependencies
-$ npm install
+# Install dependencies
+$ npm i
 
-# serve with hot reload at localhost:3000
+# Serve with hot reload at localhost:3000
 $ npm run dev
+```
+## Cypress Usage
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```bash
+# Open cypress environment
+$ npx cypress open
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+### Development Usage
 
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- Props must be declared with `type` and `default` attributes.
+- API calls must be done in the store file 
+- Axios requests must be done in store actions
