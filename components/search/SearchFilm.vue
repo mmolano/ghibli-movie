@@ -1,10 +1,10 @@
 <template>
-   <section class="m-4">
+   <div class="m-4">
       <div>
          <label class="m-2 block" for="search">Search a movie: </label>
          <input class="p-3 w-300" id="search" v-model="model" type="search" placeholder="Name, date" />
       </div>
-   </section>
+   </div>
 </template>
 
 <script>
