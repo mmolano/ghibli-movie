@@ -9,6 +9,10 @@ export default {
       brands: true
     }
   },
+
+  ignore: [
+    '**/*.cy.js', // Ignore cypress files
+  ],
   
   head: {
     title: 'Ghibli\'s Filmography Collection',
@@ -53,7 +57,7 @@ export default {
 
   axios: {
     baseURL: process.env.API_PATH,
-    credentials: true,
+    credentials: false,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

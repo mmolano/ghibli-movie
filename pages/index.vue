@@ -7,12 +7,12 @@
     <section v-else class="flex flex-wrap justify-center">
       <CardMovie v-for="film in paginatedFilms" :key="film.id" :film="film" />
     </section>
-    <section v-if="!loading && paginatedFilms.length !== 0"
+    <section id="cypress-pagination" v-if="!loading && paginatedFilms.length !== 0"
       class="mx-auto my-10 flex justify-around max-w-sm border-t-2 pt-4">
-      <button @click="previousPage" :disabled="currentPage === 1"><font-awesome-icon :icon="['fas', 'chevron-left']" />
+      <button id="cypress-prev-button" @click="previousPage" :disabled="currentPage === 1"><font-awesome-icon :icon="['fas', 'chevron-left']" />
         Previous</button>
       <p>{{ currentPage + '/' + maxPage }}</p>
-      <button @click="nextPage" :disabled="currentPage === maxPage">Next <font-awesome-icon
+      <button id="cypress-next-button" @click="nextPage" :disabled="currentPage === maxPage">Next <font-awesome-icon
           :icon="['fas', 'chevron-right']" /></button>
     </section>
   </div>

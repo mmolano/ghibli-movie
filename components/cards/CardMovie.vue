@@ -8,7 +8,7 @@
             </div>
          </div>
          <div>
-            <h2 class="font-bold text-xl">{{ film.title }}</h2>
+            <h2 class="font-bold text-xl cypress-card-title">{{ film.title }}</h2>
             <p>Duration: {{ convert(film.running_time) }}</p>
             <p>Released: {{ film.release_date }}</p>
          </div>

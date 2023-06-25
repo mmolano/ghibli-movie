@@ -1,13 +1,13 @@
 <template>
    <section class="m-4">
-      <NuxtLink class="button" :to="{ name: 'index' }"><font-awesome-icon :icon="['fas', 'arrow-left']" /> Back </NuxtLink>
+      <NuxtLink id="cypress-return-button" class="button" :to="{ name: 'index' }"><font-awesome-icon :icon="['fas', 'arrow-left']" /> Back </NuxtLink>
       <LoadingData v-if="loading" />
       <div v-else class="flex flex-wrap">
          <div class="image-container">
             <img class="w-300 my-3 mx-auto sm:w-full" :src="details.image" alt="movie image" />
          </div>
          <div class="description-container">
-            <h2 class="font-bold text-4xl">{{ details.title }}</h2>
+            <h2 class="font-bold text-4xl cypress-card-title">{{ details.title }}</h2>
             <p class="my-2">{{ details.original_title }} - {{ details.original_title_romanised }}</p>
             <p class="my-2">{{ details.description }}</p>
             <p class="my-2"><span class="font-bold text-xl">Directed by:</span></p>
