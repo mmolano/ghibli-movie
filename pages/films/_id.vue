@@ -4,17 +4,21 @@
       <LoadingData v-if="loading" />
       <div v-else class="flex flex-wrap">
          <div class="image-container">
-            <img class="mx-auto my-3" :src="details.image" alt="movie image" />
+            <img class="w-300 my-3 mx-auto sm:w-full" :src="details.image" alt="movie image" />
          </div>
          <div class="description-container">
             <h2 class="font-bold text-4xl">{{ details.title }}</h2>
             <p class="my-2">{{ details.original_title }} - {{ details.original_title_romanised }}</p>
             <p class="my-2">{{ details.description }}</p>
-            <p class="my-2"><span class="underline font-bold">Directed by:</span> {{ details.director }}</p>
-            <p class="my-2"><span class="underline font-bold">Produced by:</span> {{ details.producer }}</p>
-            <p class="my-2"><span class="underline font-bold">Released:</span> {{ details.release_date }}</p>
-            <p class="my-2"><span class="underline font-bold">Duration:</span> {{ convert(details.running_time) }}</p>
-            <h3 class="font-bold"><span class="underline">The Team:</span> ({{ filteredPeoples.length }})</h3>
+            <p class="my-2"><span class="font-bold text-xl">Directed by:</span></p>
+            <p>{{ details.director }}</p>
+            <p class="my-2"><span class="font-bold text-xl">Produced by:</span></p>
+            <p>{{ details.producer }}</p>
+            <p class="my-2"><span class="font-bold text-xl">Released:</span></p>
+            <p>{{ details.release_date }}</p>
+            <p class="my-2"><span class="font-bold text-xl">Duration:</span></p>
+            <p>{{ convert(details.running_time) }}</p>
+            <p class="my-2"><span class="font-bold text-xl">The Team: ({{ filteredPeoples.length }})</span></p>
             <div class="flex flex-wrap my-6">
                <PeopleCard v-for="people in filteredPeoples" :key="people.id" :people="people" />
             </div>
@@ -94,7 +98,7 @@ img {
    max-width: 400px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 951px) {
 
    .image-container,
    .description-container {

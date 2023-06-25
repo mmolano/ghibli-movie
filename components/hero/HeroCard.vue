@@ -1,14 +1,12 @@
 <template>
-   <div class="flex flex-col justify-center">
+   <section class="flex flex-col justify-center">
       <div class="relative">
-         <div class="max-h-600 overflow-hidden">
-            <img class="hidden sm:block w-full" src="../../assets/images/hero/ghibli.jpeg" alt="totoro image" />
-         </div>
+         <img class="w-full" src="../../assets/images/hero/head.png" alt="totoro image" />
          <div class="absolute sm:bottom-8 bottom-4 pr-10 sm:pr-0 left-4 sm:left-8 flex justify-start items-start">
-            <p class="text-3xl sm:text-4xl font-semibold leading-9 text-white">Ghibli's Movies</p>
+            <p class="hidden sm:block text-3xl font-semibold leading-9 text-white">Ghibli's Movies</p>
          </div>
       </div>
-   </div>
+   </section>
 </template>
 
 <script lang="ts">

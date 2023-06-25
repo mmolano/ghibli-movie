@@ -1,8 +1,8 @@
 <template>
-   <div class="main my-2.5 mx-auto">
+   <main class="mx-auto mb-4">
       <HeroCard />
       <Nuxt keep-alive />
-   </div>
+   </main>
 </template>
 
 <script>
@@ -17,8 +17,14 @@ body {
    color: #ffff;
 }
 
-.main {
+main {
    max-width: 1580px;
+}
+
+@media screen and (max-width: 768px) {
+   main {
+      margin-top: 0 !important;
+   }
 }
 </style>
 

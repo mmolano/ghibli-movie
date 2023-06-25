@@ -1,5 +1,5 @@
 <template>
-   <div class="my-2 flex flex-wrap flex-col w-1/6 items-center m-auto text-center">
+   <div class="w-1/2 my-2 flex flex-wrap flex-col sm:w-1/3 items-center m-auto text-center">
       <font-awesome-icon :icon="['fas', 'user']" />
       {{ people.name }}
    </div>
