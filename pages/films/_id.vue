@@ -1,8 +1,9 @@
 <template>
    <section class="m-4">
-      <NuxtLink id="cypress-return-button" class="button" :to="{ name: 'index' }"><font-awesome-icon :icon="['fas', 'arrow-left']" /> Back </NuxtLink>
+      <NuxtLink id="cypress-return-button" class="button" :to="{ name: 'index' }"><font-awesome-icon
+            :icon="['fas', 'arrow-left']" /> Back </NuxtLink>
       <LoadingData v-if="loading" />
-      <div v-else class="flex flex-wrap">
+      <div v-if="details && !loading" class="flex flex-wrap">
          <div class="image-container">
             <img class="w-300 my-3 mx-auto sm:w-full" :src="details.image" alt="movie image" />
          </div>
@@ -71,14 +72,14 @@ export default {
                this.loading = false
             }, 1000)
          } catch (err) {
-            console.log(err);
+            this.$router.push('/')
          }
       },
       async updatePeople() {
          try {
             await this.fetchPeoples()
          } catch (err) {
-            console.log(err);
+            this.$router.push('/')
          }
       },
       convert(minutes) {

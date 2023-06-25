@@ -22,16 +22,24 @@ export const actions: ActionTree<RootState, RootState> = {
          const response = await this.$axios.$get('films?fields=title,release_date,running_time,id,image')
          commit('SET_FILMS', response)
       } catch (e: any) {
-         // Create mixin error
-         console.log(e.message);
+         this.$toast.show({
+            type: 'danger',
+            title: 'Error',
+            message: 'Could not load films',
+         })
+         throw e
       }
    },
    async fetchFilm(context, id) {
       try {
-         const response = await this.$axios.$get(`films/${id}`)
-         return response
+         return await this.$axios.$get(`films/${id}`)
       } catch (e: any) {
-         console.log(e.message);
+         this.$toast.show({
+            type: 'danger',
+            title: 'Error',
+            message: 'Could not load film informations',
+         })
+         throw e
       }
    },
 }

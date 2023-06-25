@@ -13,7 +13,7 @@ export default {
   ignore: [
     '**/*.cy.js', // Ignore cypress files
   ],
-  
+
   head: {
     title: 'Ghibli\'s Filmography Collection',
     htmlAttrs: {
@@ -53,6 +53,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    ['nuxt-tailvue', { toast: true }],
   ],
 
   axios: {
