@@ -28,8 +28,11 @@ export const actions: ActionTree<RootState, RootState> = {
          const response = await this.$axios.$get('people?fields=name,id,url')
          commit('SET_PEOPLES', response)
       } catch (e: any) {
-         // Create mixin error
-         console.log(e.message);
+         this.$toast.show({
+            type: 'danger',
+            title: 'Error',
+            message: 'There was an error loading some data, please contact the administrator.',
+         })
       }
    },
 }
