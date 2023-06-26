@@ -33,6 +33,11 @@ import { mapActions, mapState } from 'vuex';
 import toHours from '../../lib/minutes-converter';
 
 export default {
+   head() {
+      return {
+         title: this.details.title
+      }
+   },
    data() {
       return {
          details: {
