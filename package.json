@@ -2,6 +2,7 @@
   "name": "movie",
   "version": "1.0.0",
   "private": true,
+  "author": "Miguel Molano <miguel.molanopro@gmail.com>",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

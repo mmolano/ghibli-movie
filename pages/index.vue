@@ -27,6 +27,24 @@ export default {
   components: {
     CardMovie,
   },
+  head() {
+    return {
+      title: 'Ghibli\'s movies',
+      meta:
+        [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Get all Ghibli\'s movies informations',
+          },
+          {
+            hid: 'keywords',
+            name: 'keywords',
+            content: 'ghibli, movies, animation',
+          }
+        ]
+    }
+  },
   data() {
     return {
       search: '',
